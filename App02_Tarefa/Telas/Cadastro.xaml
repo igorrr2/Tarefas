@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App02_Tarefa.Telas.Cadastro">
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+            <Label Text="Nome" FontAttributes="Bold"/>
+            <Entry x:Name="TxtNome"/>
+            <Label Text="Prioridade" FontAttributes="Bold"/>
+            <StackLayout x:Name="SlPrioridades">
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="p4.png"/>
+                    <Label Text="Urgente e importante" HorizontalOptions="FillAndExpand" TextColor="Gray"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PrioridadeSelectAction"/>
+                    </StackLayout.GestureRecognizers>
+                    
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="p3.png"/>
+                    <Label Text="Urgente e não importante" HorizontalOptions="FillAndExpand" TextColor="Gray"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PrioridadeSelectAction"/>
+                    </StackLayout.GestureRecognizers>
+
+
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="p2.png"/>
+                    <Label Text="Não urgente e importante" HorizontalOptions="FillAndExpand" TextColor="Gray"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PrioridadeSelectAction"/>
+                    </StackLayout.GestureRecognizers>
+
+
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="p1.png"/>
+                    <Label Text="Não urgente e não importante" HorizontalOptions="FillAndExpand" TextColor="Gray"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PrioridadeSelectAction"/>
+                    </StackLayout.GestureRecognizers>
+
+
+                </StackLayout>
+                
+            </StackLayout>
+            <Button Clicked="SalvarAction" Padding="10" WidthRequest="80" Text="OK" HorizontalOptions="End" Background="Blue" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

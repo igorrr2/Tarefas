@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App02_Tarefa.Telas.Inicio"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+
+            <StackLayout BackgroundColor="#0D1F2D" HeightRequest="250">
+                <Label Text="Meu Dia" FontSize="24" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label Text="" x:Name="DataHoje" TextColor="White" HorizontalOptions="Start" VerticalOptions="End"/>
+
+            </StackLayout>
+
+            <StackLayout x:Name="SLTarefas" Padding="30" Spacing="10">
+                <StackLayout Orientation="Horizontal" Spacing="15">
+
+                    <Image VerticalOptions="Center" Source="CheckOff.png"/>
+                    <Label HorizontalOptions="FillAndExpand" Text="Task 1"/>
+                    <Image VerticalOptions="Center" Source="p4.png"/>
+                    <Image VerticalOptions="Center" Source="Delete.png"/>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="15">
+                    <Image VerticalOptions="Center" Source="CheckOn.png"/>
+                    <StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
+                        <Label Text="Task 1" TextColor="Gray"/>
+                        <Label Text="Finalizado em 20/01/2018 - 17:00h" TextColor="Gray" FontSize="10"/>
+                    </StackLayout>
+
+                    <Image VerticalOptions="Center" Source="p3.png"/>
+                    <Image VerticalOptions="Center" Source="Delete.png"/>
+                </StackLayout>
+            </StackLayout>
+            <Button VerticalOptions="EndAndExpand"  ImageSource="AddBotao.png" BackgroundColor="Transparent" HorizontalOptions="Center" Clicked="ActionGoCadastro"/>
+        </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
